@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   config.ssh.forward_agent
   config.vm.network "private_network", ip: "192.168.50.4"
   
-  config.vm.synced_folder "../crusher", "/crusher"
+  config.vm.synced_folder "../rails", "/rails"
   config.vm.synced_folder("./puppet/templates", "/tmp/vagrant-puppet/templates")
   
   # vagrant up --provider=virtualbox
