@@ -6,10 +6,10 @@ Complete dev machine for Rails Girls via Vagrant and Puppet
 This box used in [Rails Girls New Orleans](http://railsgirls.com/neworleans)
 
 ### TO INSTALL:
-* Download and Install Virtual Box platform package for your particular Operating System - [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
-* Download and Install Vagrant - [http://www.vagrantup.com/](http://www.vagrantup.com/)
-* Download this repository of files - [https://github.com/IconoclastLabs/railsgirls_machine/archive/master.zip](https://github.com/IconoclastLabs/railsgirls_machine/archive/master.zip)
+* Download and Install Virtual Box platform package for your particular Operating System - [LINK](https://www.virtualbox.org/wiki/Downloads)
+* Download and Install Vagrant - [LINK](http://www.vagrantup.com/)
+* Download this repository of files - [LINK](https://github.com/IconoclastLabs/railsgirls_machine/archive/master.zip)
   * Unzip these files; it will create a folder called `railsgirls_machine`
   * Create a folder called `railsgirls` at the same level as the railsgirls_machine folder (that you just unzipped)
-* Open Terminal / Commandline and navigate to the directory you downloaded
+* Open Terminal / Command Prompt and navigate to the directory you downloaded (See [Guides::Find Terminal and Command Prompt](http://railsgirlsnola.herokuapp.com/resources) for help)
 * type `vagrant up`
