@@ -15,4 +15,4 @@ Local Event site [RailsGirlsNola.com](http://www.railsgirlsnola.com/)
 * Open Terminal / Command Prompt and navigate to the directory you downloaded (See [Guides::Find Terminal and Command Prompt](http://railsgirlsnola.herokuapp.com/resources) for help)
 * type `vagrant up`
 
-#### Additional Install Directions can be found on the [Rails Girls Resources Page](http://www.railsgirlsnola.com/resources)
+#### Additional install directions can be found on the [Rails Girls Resources Page](http://www.railsgirlsnola.com/resources)
