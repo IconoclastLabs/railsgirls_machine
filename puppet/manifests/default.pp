@@ -331,64 +331,48 @@ vcsrepo { "/home/vagrant/.oh-my-zsh":
   revision => 'master',
 }
 
-vcsrepo { "/home/vagrant/Dotfiles":
-  ensure   => latest,
-  owner    => vagrant,
-  group    => vagrant,
-  provider => git,
-  require => [Package['git'], Package['zsh'], Package['curl']],
-  source   => "https://github.com/IconoclastLabs/CrusherDotfiles.git",
-  revision => 'master',
-}->
-file { '/home/vagrant/Rakefile':
-  ensure => 'link',
-  owner    => vagrant,
-  group    => vagrant,
-  target => '/home/vagrant/Dotfiles/Rakefile',
-}->
 file { '/home/vagrant/.zshrc':
-  ensure => 'link',
   owner    => vagrant,
   group    => vagrant,
-  target => '/home/vagrant/Dotfiles/zshrc',
-}->
+  content => template("dotfiles/zshrc"),
+}
+file { '/home/vagrant/.bashrc':
+  owner    => vagrant,
+  group    => vagrant,
+  content => template("dotfiles/bashrc"),
+}
 file { '/home/vagrant/.aliases':
-  ensure => 'link',
   owner    => vagrant,
   group    => vagrant,
-  target => '/home/vagrant/Dotfiles/aliases',
-}->
-file { '/home/vagrant/.vimrc':
-  ensure => 'link',
-  owner    => vagrant,
-  group    => vagrant,
-  target => '/home/vagrant/Dotfiles/vimrc',
-}#->
-# install Neobundle for VIM
-file { '/home/vagrant/.vim':
-  ensure  => directory,
-  group   => vagrant,
-  owner   => vagrant,
+  content => template("dotfiles/aliases"),
 }
-vcsrepo { "/home/vagrant/.vim/bundle/neobundle.vim":
-  ensure   => latest,
+file { '/home/vagrant/.irbrc':
   owner    => vagrant,
   group    => vagrant,
-  provider => git,
-  require => [Package['git'], Package['zsh'], Package['curl']],
-  source   => "git://github.com/Shougo/neobundle.vim",
-  revision => 'master',
-}->
-file { '/home/vagrant/.vim/bundle':
-  ensure  => directory,
-  group   => vagrant,
-  owner   => vagrant,
-}->
-file { '/home/vagrant/.vim/backup':
-  ensure  => directory,
-  group   => vagrant,
-  owner   => vagrant,
+  content => template("dotfiles/irbrc"),
 }
+file { '/home/vagrant/.gemrc':
+  owner    => vagrant,
+  group    => vagrant,
+  content => template("dotfiles/gemrc"),
+}
+file { '/home/vagrant/.tmux.conf':
+  owner    => vagrant,
+  group    => vagrant,
+  content => template("dotfiles/tmux.conf"),
+}
+file { '/home/vagrant/.gemrc':
+  owner    => vagrant,
+  group    => vagrant,
+  content => template("dotfiles/gemrc"),
+}
+file { '/home/vagrant/bundle/config':
+  owner    => vagrant,
+  group    => vagrant,
+  content => template("dotfiles/bundle/config"),
+}
+
+
 file { '/home/vagrant/.ssh/':
     ensure  => directory,
     group   => vagrant,
