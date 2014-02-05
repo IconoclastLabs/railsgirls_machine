@@ -361,11 +361,7 @@ file { '/home/vagrant/.tmux.conf':
   group    => vagrant,
   content => template("dotfiles/tmux.conf"),
 }
-file { '/home/vagrant/.gemrc':
-  owner    => vagrant,
-  group    => vagrant,
-  content => template("dotfiles/gemrc"),
-}
+
 file { '/home/vagrant/bundle/config':
   owner    => vagrant,
   group    => vagrant,
