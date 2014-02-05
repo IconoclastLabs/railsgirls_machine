@@ -249,6 +249,10 @@ rbenv::gem { 'pry':
   user => "vagrant",
   ruby => "2.1.0",
 }->
+rbenv::gem { 'awesome_print':
+  user => "vagrant",
+  ruby => "2.1.0",
+}->
 rbenv::gem { 'hirb':
   user => "vagrant",
   ruby => "2.1.0",
